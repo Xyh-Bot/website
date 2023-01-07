@@ -6,9 +6,13 @@ jobs:
   npm-publish:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Push
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          repository: website
-          branch: main
+        - name​: Deploy 
+          ​uses​: peaceiris/actions-gh-pages@v3 
+ ​     ​with​: 
+ ​    ​     personal_token​: ​${{ secrets.TOKEN }} 
+ ​       ​publish_dir​: ​.
+ ​       external_repository​: Xyh-Bot/webiste
+ ​       publish_branch​: main
+ ​       exclude_assets​: '​'
+ ​       user_name​: Xyh-Bot
+ ​       ​user_email​: xyh-bot@outlook.com
